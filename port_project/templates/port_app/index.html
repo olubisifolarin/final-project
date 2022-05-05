@@ -1,0 +1,475 @@
+{% extends 'port_app/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+
+{% block title%}
+Home
+{% endblock %}
+
+{% block content %}
+	
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	      <div class="slider-item ">
+	      	<div class="overlay"></div>
+	        <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last myimg" style="background-image:url({% static 'port_app/images/mypi.png'%}); background-repeat: no-repeat;">
+	          		<div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="sub1 subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Olubisi Folarin</span></h1>
+			            <h2 class="mb-4">A Freelance Web Developer</h2>
+			            <p><a href="#" class="btn btn-primary py-3 px-4">Hire me</a> <a href="#" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+
+	      <div class="slider-item">
+	      	<div class="overlay"></div>
+	        <div class="container">
+	          <div class="row d-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last myimg" style="background-image:url({% static 'port_app/images/mypi.png' %}); background-repeat: no-repeat;">
+	          		<div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm a <span>web designer</span> based in Lagos State</h1>
+			            <p><a href="#" class="btn btn-primary py-3 px-4">Hire me</a> <a href="#" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+	    </div>
+    </section>
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+    		<div class="row d-flex">
+    			<div class="col-md-6 col-lg-5 d-flex">
+    				<div class="img-about img d-flex align-items-stretch">
+    					<div class="overlay"></div>
+	    				<div class="img d-flex align-self-stretch align-items-center pics" style="height: 800px; background-image:url({% static 'port_app/images/mypi.png' %});">
+	    				</div>
+    				</div>
+    			</div>
+    			<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+    				<div class="row justify-content-start pb-3">
+		          <div class="col-md-12 heading-section ftco-animate">
+		          	<h1 class="big">About</h1>
+		            <h2 class="mb-4">About Me</h2>
+		            <p>We specialize in designing powerful branding websites that are top notch.</p>
+		            <ul class="about-info mt-4 px-md-0 px-2">
+		            	<li class="d-flex"><span>Name:</span> <span>Olubisi Folarin</span></li>
+		            	<li class="d-flex"><span>Date of birth:</span> <span>May 23, 1991</span></li>
+		            	<li class="d-flex"><span>Address:</span> <span>Block 8 Plot 7 Dove Estate Ile-epo,Lagos State</span></li>
+		            	<li class="d-flex"><span>Zip code:</span> <span>100001</span></li>
+		            	<li class="d-flex"><span>Email:</span> <span>hollubissy4real10@gmail.com</span></li>
+		            	<li class="d-flex"><span>Phone: </span> <span>+234 8021317321</span></li>
+		            </ul>
+		          </div>
+		        </div>
+	          <div class="counter-wrap ftco-animate d-flex mt-md-3">
+              <div class="text">
+              	<p class="mb-4">
+	                <span class="number" data-number="20">0</span>
+	                <span>Project complete</span>
+                </p>
+                <p><a href="{% static 'port_app/images/myCV.docx' %}" download="My CV" class="btn btn-primary py-3 px-3">Download CV</a></p>
+              </div>
+	          </div>
+	        </div>
+        </div>
+    	
+    </section>
+
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p></p>
+          </div>
+        </div>
+    		<div class="row">
+			{% if port %}
+			{% for p in port %}
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">{{p.year}}</span>
+    					<h2>{{p.title}}</h2>
+    					<span class="position">{{p.subtitle}}</span>
+    					<p class="mt-4">{{p.content}}</p>
+    				</div>
+				</div>
+			{% endfor %}	
+			{% endif %}
+    				
+    		</div>
+
+    			
+    			
+    		<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="{% static 'port_app/images/myCV.docx' %}" class="btn btn-primary py-4 px-5">Download CV</a></p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+    <section class="ftco-section" id="services-section">
+    	<div class="container">
+    		<div class="row justify-content-center py-5 mt-5">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Services</h1>
+            <h2 class="mb-4">Services</h2>
+            <p>Full-cycle websites design and development.</p>
+          </div>
+        </div>
+    		<div class="row">
+					<div class="col-md-4 text-center d-flex ftco-animate">
+						<a href="#" class="services-1">
+							<span class="icon">
+								<i class="flaticon-analysis"></i>
+							</span>
+							<div class="desc">
+								<h3 class="mb-5">Web Design</h3>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-4 text-center d-flex ftco-animate">
+						<a href="#" class="services-1">
+							<span class="icon">
+								<i class="flaticon-flasks"></i>
+							</span>
+							<div class="desc">
+								<h3 class="mb-5">Web Development</h3>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-4 text-center d-flex ftco-animate">
+						<a href="#" class="services-1">
+							<span class="icon">
+								<i class="flaticon-ideas"></i>
+							</span>
+							<div class="desc">
+								<h3 class="mb-5">Full Stack Development</h3>
+							</div>
+						</a>
+					</div>
+
+					
+				</div>
+    	</div>
+    </section>
+
+		
+	<section class="ftco-section" id="skills-section">
+		<div class="container">
+			<div class="row justify-content-center pb-5">
+            <div class="col-md-12 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Skills</h1>
+            <h2 class="mb-4">My Skills</h2>
+            <p>My skills includes</p>
+            </div>
+            </div>
+				<div class="row">
+					{% if skill %}
+					{% for sk in skill %}
+					<div class="col-md-6 animate-box">
+						<div class="progress-wrap ftco-animate">
+							<h3>{{sk.name}}</h3>
+							<div class="progress">
+							 	<div class="progress-bar color-1" role="progressbar" aria-valuenow="{{sk.title}}"
+							  	aria-valuemin="0" aria-valuemax="100" style="width:{{sk.title}}%">
+							    <span>{{sk.title}}%</span>
+							  	</div>
+							</div>
+						</div>
+					</div>
+					{% endfor %}
+					{% endif %}
+				
+				</div>
+		</div>
+	</section>
+ 
+
+    <section class="ftco-section ftco-project" id="projects-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">My Projects</h2>
+            <p>Below is our projects</p>
+		  </div>
+        </div>
+    		<div class="row">
+    			<div class="col-md-4">
+    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url({% static 'port_app/images/CSS.png' %});">
+    					<div class="overlay"></div>
+	    				<div class="text text-center p-4">
+	    					<h3><a href="#">CSS</a></h3>
+	    					<span>Web Design</span>
+	    				</div>
+    				</div>
+  				</div>
+  				<div class="col-md-8">
+    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url({% static 'port_app/images/CBT.png' %});">
+    					<div class="overlay"></div>
+	    				<div class="text text-center p-4">
+	    					<h3><a href="#">JAVASCRIPT</a></h3>
+	    					<span>Web Design</span>
+	    				</div>
+    				</div>
+  				</div>
+
+    			<div class="col-md-8">
+    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url({% static 'port_app/images/HTML.png' %});">
+    					<div class="overlay"></div>
+	    				<div class="text text-center p-4">
+	    					<h3><a href="#">HTML</a></h3>
+	    					<span>Web Design</span>
+	    				</div>
+    				</div>
+    			</div>
+    			<div class="col-md-4">
+    				<div class="row">
+    					<div class="col-md-12">
+		    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url({% static 'port_app/images/pro.png' %});">
+		    					<div class="overlay"></div>
+			    				<div class="text text-center p-4">
+			    					<h3><a href="#">Front end Development</a></h3>
+			    					<span>Web Design</span>
+			    				</div>
+		    				</div>
+	    				</div>
+	    				
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+
+	<section class="ftco-section" id="blog-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-5">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Blog</h1>
+					<h2 class="mb-4">My Blog</h2>
+					<p>Welcome to my blog, where u can get insight of what is happening around you.</p>
+				</div>
+			</div>
+			<div class="row d-flex">
+				{% if blog %}
+				{% for b in blog %}
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+					<img class="block-20" src="{{ b.image_url }}" alt="">
+					</a>
+					<div class="text mt-3 float-right d-block">
+						<div class="d-flex align-items-center mb-3 meta">
+						  <p class="mb-0">
+							  <span class="mr-2"></span>
+							  <a href="#" class="mr-2">{{b.poster}}</a>
+							  <a href="#" class="meta-chat"><span class="icon-chat">{{b.created}}</span></a>
+						  </p>
+					  </div>
+					  <h3 class="heading">{{ b.title }}</h3>
+					  <p>{{ b.content|slice:":50" }}</p>
+					  <a href="{% url 'port_app:detail_blog' b.slug %}" class="btn btn-warning">READ MORE &rrarr;</a>
+					</div>
+				  </div>
+				</div>
+				{% endfor %}
+				{% endif %}
+			  </div>
+			  <div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="{% url 'port_app:blog' %}" class="btn btn-primary py-4 px-5">View More</a></p>
+    			</div>
+    		</div>
+		</div>
+    </section>
+
+
+    <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+    	<div class="container">
+				<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="5">0</strong>
+                <span>Awards</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="10">0</strong>
+                <span>Complete Projects</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="10">0</strong>
+                <span>Happy Customers</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="20">0</strong>
+                <span>Cups of coffee</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+	
+
+	
+		<div class="container p-5">
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>I'm <span class="text-warning">Available</span> for freelancing</h2>
+					<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+					<p class="mb-0"><a href="#" class="btn btn-warning py-3 px-5">Hire me</a></p>
+				</div>
+			</div>
+		</div>
+	
+
+    
+
+	<section id="testimonials" class="testimonials section-bg">
+		<div class="container" data-aos="fade-up">
+  
+		  <div class="">
+			<div class="col-md-12 heading-section text-center ftco-animate">
+				<h1 class="big big-2">Testimonials</h1>
+				<h2 class="heading-section">Testimonials</h2>
+				<p>What they're saying about us</p>
+		  </div>
+		  	<div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+				<div class="swiper-wrapper">
+					{% if testi %}
+					{% for t in testi %}
+					<div class="swiper-slide">
+						
+						<div class="testimonial-item">
+							
+						<p>
+							<i class="bx bxs-quote-alt-left quote-icon-left text-warning"></i>
+							{{t.content}}
+							<i class="bx bxs-quote-alt-right quote-icon-right text-warning"></i>
+						</p>
+						<img src="{{t.image.url}}" class="testimonial-img" alt="">
+						<h3>{{t.name}}</h3>
+						<h4>{{t.title}} </h4>
+							
+						</div>
+						
+					</div>
+					{% endfor %}
+					{% endif %}
+				</div><!-- End testimonial item -->
+		    </div>
+			
+		</div>
+  
+			
+	</section><!-- End Testimonials Section -->
+  
+	
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>You can contact me through the following ways</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Block 8, Plot 7 Dove Estate Ile-epo, Lagos State</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://234 8021317321">+234 8021317321</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-chat"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:hollubissy4real10@gmail.com">hollubissy4real10@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Website</h3>
+	            <p><a href="#">yoursite.com</a></p>
+	          </div>
+          </div>
+        </div>
+
+        <div class="row no-gutters block-9">
+          <div class="col-md-6 order-md-last d-flex">
+			  
+            <form action="#" method= 'POST' class="bg-dark p-4 p-md-5 contact-form">
+				
+			 {{contact.as_p }}
+              
+              <div class="form-group">
+                <input type="submit" value="Send Message" style="width:50%;" class="btn btn-primary py-3 px-5">
+              </div>
+			  {% csrf_token %}
+            </form>
+          
+          </div>
+
+          <div class="col-md-6 d-flex">
+          	<div class="img" style="background-image: url({% static 'port_app/images/mypi.png' %});"></div>
+          </div>
+        </div>
+      </div>
+
+	  
+    </div>
+
+    </section>
+		
+
+{% endblock %}

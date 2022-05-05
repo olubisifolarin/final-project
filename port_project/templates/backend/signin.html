@@ -1,0 +1,43 @@
+{% extends 'port_app/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+
+{% block title%}
+Home
+{% endblock %}
+
+{% block content %}
+	
+<div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+    <div class="wrapper wrapper--w680">
+        <div class="card card-4">
+            <div class="card-body">
+                <h2 class="title text-center">SignIn</h2>
+              
+                <form action="" method= "POST">
+                {% if messages %}
+                {% for m in messages %}
+                <div class="alert alert-danger">{{m}}</div>
+                {% endfor %}
+                {% endif %}
+                    <div class="input-group">
+                        <label class="label">Username</label>
+                           <input class="input--style-4" type="text" name="user_name">
+                   </div>
+                   <div class="input-group">
+                       <label class="label">Password</label>
+                       <input class="input--style-4" type="password" required name="password"> 
+                   </div>
+
+                       <button class="btn btn--radius-2 btn--blue" type="submit">Login</button>
+                    
+                    
+                    <p>Don't have an account? <a href="{% url 'port_app:register' %}">Create an account</a></p>  
+                    {% csrf_token %}   
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,115 @@
+{% extends 'backend/base.html' %}
+{% load static %}
+
+
+{% block title%}
+Home
+{% endblock %}
+
+{% block content %}
+
+<!DOCTYPE html>    
+        <!-- partial -->
+        <div class="main-panel">
+          <div class="content-wrapper">
+            <div class="page-header">
+              <h3 class="page-title"> View Your Profile </h3>
+              
+            </div>
+          
+            
+            <div class="row">
+              <div class="col-md-4 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Profile Image</h4>
+        
+                    <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3">
+                      <div class="text-md-center text-xl-left">
+                        <img class="img-lg rounded-circle " src="{% static 'backend/assets/images/student.png' %}" alt="">
+                        <h6 class="mb-1">{{user.image.url}}</h6>
+        
+                      </div>
+                      
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex flex-row justify-content-between">
+                      <h4 class="card-title mb-1">Your Profile</h4>
+                      <p class="text-muted mb-1"></p>
+                    </div>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="preview-list">
+                          <div class="preview-item border-bottom">
+                            <div class="preview-thumbnail">
+                              <div class="preview-icon bg-primary">
+                                <i class="mdi  mdi-account"></i>
+                              </div>
+                            </div>
+                            <div class="preview-item-content d-sm-flex flex-grow">
+                              <div class="flex-grow">
+                                <h6 class="preview-subject">Username</h6>
+                                <p class="text-muted mb-0">{{user.username}}</p>
+                              </div>
+                              
+                            </div>
+                          </div>
+                          <div class="preview-item border-bottom">
+                            <div class="preview-thumbnail">
+                              <div class="preview-icon bg-success">
+                                <i class="mdi mdi-account"></i>
+                              </div>
+                            </div>
+                            <div class="preview-item-content d-sm-flex flex-grow">
+                              <div class="flex-grow">
+                                
+                                <h6 class="preview-subject">Firstname</h6>
+                                <p class="text-muted mb-0">{{user.first_name}}</p>
+                              </div>
+                              
+                            </div>
+                          </div>
+                          <div class="preview-item border-bottom">
+                            <div class="preview-thumbnail">
+                              <div class="preview-icon bg-info">
+                                <i class="mdi mdi-account"></i>
+                              </div>
+                            </div>
+                            <div class="preview-item-content d-sm-flex flex-grow">
+                              <div class="flex-grow">
+                                <h6 class="preview-subject">Lastname</h6>
+                                <p class="text-muted mb-0">{{user.last_name}}</p>
+                              </div>
+                              
+                            </div>
+                          </div>
+                          <div class="preview-item border-bottom">
+                            <div class="preview-thumbnail">
+                              <div class="preview-icon bg-danger">
+                                <i class="mdi mdi-email-open"></i>
+                              </div>
+                            </div>
+                            <div class="preview-item-content d-sm-flex flex-grow">
+                              <div class="flex-grow">
+                                <h6 class="preview-subject">Email</h6>
+                                <p class="text-muted mb-0">{{user.email}}</p>
+                              </div>
+                            
+                            </div>
+                          </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends 'backend/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+
+
+{% block title %}
+Home
+{% endblock %}
+                     
+
+{% block content %}
+        <!-- partial -->
+
+              <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">View Blog</h4>
+                    <p class="card-description">View my Blogs
+                    </p>
+                    <div class="table-responsive">
+                      {% if not view %}
+                        <h5 class="text-center">
+                          No blog post
+                        </h5>
+                        {% else %}
+                      <table class="table table-bordered">
+
+                        <thead>
+                         
+                          <tr>
+                            <th>S/N </th>
+                            <th>Blog Title</th>
+                            <th> Blog Content </th>
+                            <th> Date </th>
+                            <th> Action </th>
+                          </tr>
+                         
+                          {% if view %}
+                          {% for v in view %}
+                          <tr>
+                            <td>{{forloop.counter}}</td>
+                            <td>{{v.title}}</td>
+                            <td>{{v.content|truncatewords:20}}</td>
+                            <td>{{v.created}}</td>
+                            <td>
+                              <button class="btn btn-success m-3"><a href="{% url 'backend:view_blogpost' v.slug %}">View</a></button>
+                              
+                          </td>
+                          <td>
+                            <button class="btn btn-warning m-3"><a href="{% url 'backend:editpost' v.slug %}">Edit</a></button>
+                             
+                          </td>
+                          <td> <button class="btn btn-danger m-3"><a href="{% url 'backend:delete_blog' v.slug %}">Delete</a></button></td>
+                          </tr>
+                        {% endfor %}
+                        {% endif %}
+                      </table>
+                      {% endif %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+          <!-- content-wrapper ends -->
+{% endblock %}

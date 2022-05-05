@@ -1,0 +1,212 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      {% block title %}
+      {% endblock %}
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="{% static 'port_app/assets/img/teddy.png' %}" rel="icon">
+    <link href="{% static 'port_app/assets/img/teddy.png' %}" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="{% static 'port_app/assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'port_app/assets/vendor/aos/aos.css' %}" rel="stylesheet">
+    <link href="{% static 'port_app/assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'port_app/assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'port_app/assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'port_app/assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'port_app/assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+    <link href="{% static 'port_app/fonts/font-awesome-4.5.0/css/font-awesome.min.css' %}" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  
+    <!-- Vendor CSS-->
+    <link href="{% static 'port_app/vendor/select2/select2.min.css' %}" rel="stylesheet" media="all">
+    <link href="{% static 'port_app/vendor/datepicker/daterangepicker.css' %}" rel="stylesheet" media="all">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'port_app/css/open-iconic-bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'port_app/css/animate.css' %}">
+    
+    <link rel="stylesheet" href="{% static 'port_app/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'port_app/css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'port_app/css/magnific-popup.css' %}">
+
+    <link rel="stylesheet" href="{% static 'port_app/css/aos.css' %}">
+
+    <link rel="stylesheet" href="{% static 'port_app/css/ionicons.min.css' %}">
+    
+    <link rel="stylesheet" href="{% static 'port_app/css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'port_app/css/icomoon.css' %}">
+    <link href="{% static 'port_app/css/main.css' %}" rel="stylesheet" media="all">
+    
+    <link rel="stylesheet" href="{% static 'port_app/css/style.css' %}">
+    <link href="{% static 'port_app/assets/css/style.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'port_app/css/custom.css' %}">
+    <link href="{% static 'port_app/vendor/mdi-font/css/material-design-iconic-font.min.css' %}" rel="stylesheet" media="all">
+    <link href="{% static 'port_app/vendor/font-awesome-4.7/css/font-awesome.min.css' %}" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+  
+    <!-- Main CSS-->
+    
+  </head>
+
+<body>
+
+  <header id="header" class="fixed-top d-flex align-items-cente" style="border-bottom: #000000; background-color: #000000;">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+
+      <h1 class="logo me-auto me-lg-0" style="font-weight: bold;"><a href="{% url 'index' %} ">Folarin</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+          <li class="nav-item"><a href="#services-section" class="nav-link"><span>Services</span></a></li>
+          <li class="nav-item"><a href="#skills-section" class="nav-link"><span>Skills</span></a></li>
+          <li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projects</span></a></li>
+          <li class="nav-item"><a href="#blog-section" class="nav-link"><span>My Blog</span></a></li>
+          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+          <li class="nav-item"><a href="{% url 'port_app:register' %}" class="nav-link"><span>Register</span></a></li>
+        </ul>   
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+    </div>
+  </header><!-- End Header -->
+<!-- <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	
+
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" style="font-size: 150%;" href="{% url 'index' %}">Folarin</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#services-section" class="nav-link"><span>Services</span></a></li>
+	          <li class="nav-item"><a href="#skills-section" class="nav-link"><span>Skills</span></a></li>
+	          <li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#blog-section" class="nav-link"><span>My Blog</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	          <li class="nav-item"><a href="{% url 'port_app:register' %}" class="nav-link"><span>Register</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+    </nav> --> -->
+    {% block content %}
+    {% endblock %}
+    <footer class="ftco-footer ftco-section">
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-md">
+              <div class="ftco-footer-widget mb-4">
+                <h2 class="ftco-heading-2">About</h2>
+                <p>We specialize in designing powerful branding websites that are top notch..</p>
+                <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                  <li class="ftco-animate"><a href="https://www.linkedin.com/in/olubisi-folarin-1795a8236/"><span class="fa fa-linkedin-square"></span></a></li>
+                  <li class="ftco-animate"><a href="mailto:hollubissy4real10@gmail.com"><span class="icon-icon icon-envelope"></span></a></li>
+                  <li class="ftco-animate"><a href="https://web.facebook.com/folarin.olubisi/"><span class="icon-facebook"></span></a></li>
+                  <li class="ftco-animate"><a href="https://wa.me/2348021317321"><span class="icon icon-whatsapp"></span></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="ftco-footer-widget mb-4 ml-md-4">
+                <h2 class="ftco-heading-2"></h2>
+                <ul class="list-unstyled">
+                  <li><a href="#home-section"><span class="icon-long-arrow-right mr-2"></span>Home</a></li>
+                  <li><a href="#about-section"><span class="icon-long-arrow-right mr-2"></span>About</a></li>
+                  <li><a href="#services-section"><span class="icon-long-arrow-right mr-2"></span>Services</a></li>
+                  <li><a href="#projects-section"><span class="icon-long-arrow-right mr-2"></span>Projects</a></li>
+                  <li><a href="#contact-section"><span class="icon-long-arrow-right mr-2"></span>Contact</a></li>
+                  <li><a href="{% url 'port_app:register' %}"><span class="icon-long-arrow-right mr-2"></span>Register</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md">
+               <div class="ftco-footer-widget mb-4">
+                <h2 class="ftco-heading-2">Services</h2>
+                <ul class="list-unstyled">
+                  <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Web Design</a></li>
+                  <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Web Development</a></li>
+                  <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Full Stack Development</a></li>
+                  
+                </ul>
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="ftco-footer-widget mb-4">
+                  <h2 class="ftco-heading-2">Have a Questions?</h2>
+                  <div class="block-23 mb-3">
+                    <ul>
+                      <li><span class="icon icon-map-marker"></span><span class="text">Block 8 Plot 7 Dove Estate Ile-epo, Lagos, Nigeria</span></li>
+                      <li><a href="tel://234 0821317321"><span class="icon icon-phone"></span><span class="text">+234 8021317321</span></a></li>
+                      <li><a href="mailto:hollubissy4real10@gmail.com"><span class="icon icon-envelope"></span><span class="text">hollubissy4real10@gmail.com</span></a></li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+          
+      </footer>
+  </div>
+      
+    
+  
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+  
+    <script src="{% static 'port_app/assets/vendor/aos/aos.js' %}"></script>
+    <script src="{% static 'port_app/assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'port_app/assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+    <script src="{% static 'port_app/assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'port_app/assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'port_app/assets/vendor/php-email-form/validate.js' %}"></script>
+
+    <!-- Template Main JS File -->
+    <script src="{% static 'port_app/assets/js/main.js' %}"></script>
+    <script src="{% static 'port_app/js/jquery.min.js' %}"></script>
+    <script src="{% static 'port_app/js/jquery-migrate-3.0.1.min.js' %}"></script>
+    <script src="{% static 'port_app/js/popper.min.js' %}"></script>
+    <script src="{% static 'port_app/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'port_app/js/jquery.easing.1.3.js' %}"></script>
+    <script src="{% static 'port_app/js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'port_app/js/jquery.stellar.min.js' %}"></script>
+    <script src="{% static 'port_app/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'port_app/js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'port_app/js/aos.js' %}"></script>
+    <script src="{% static 'port_app/js/jquery.animateNumber.min.js' %}"></script>
+    <script src="{% static 'port_app/js/scrollax.min.js' %}"></script>
+    
+    <script src="{% static 'port_app/js/main.js' %}"></script>
+    <script src="{% static 'port_app/vendor/jquery/jquery.min.js' %}"></script>
+    <!-- Vendor JS-->
+    <script src="{% static 'port_app/vendor/select2/select2.min.js' %}"></script>
+    <script src="{% static 'port_app/vendor/datepicker/moment.min.js' %}"></script>
+    <script src="{% static 'port_app/vendor/datepicker/daterangepicker.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- Main JS-->
+    <script src="{% static 'port_app/js/global.js' %}"></script>
+      
+  </body>
+  </html>

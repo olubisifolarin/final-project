@@ -1,0 +1,477 @@
+
+.MyCon{
+    background-color: rgb(52, 88, 88);
+}
+
+#foot {
+    width: 1110px;
+    margin: 0 auto;
+    padding: 0;                                 
+    background-color: rgb(52, 88, 88);
+
+}
+.ftco-navbar-light .container {
+    width: 1110px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.owl-carousel.home-slider .slider-item .slider-text h1 span {
+    font-weight: 800;
+    color: #ffc107; 
+}
+
+.owl-carousel.home-slider .slider-item .slider-text .subheading {
+    color: #000000;
+    font-weight: 800;
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #ffc107; }
+
+.btn.btn-primary {
+    background: #ffc107;
+    border: 1px solid #ffc107 !important;
+    color: #000000 !important; }
+.btn.btn-primary:hover {
+    border: 1px solid #ffc107 !important;
+    background: #ffc107 !important;
+    color: #000000 !important; }
+.btn.btn-primary.btn-outline-primary {
+    border: 2px solid #ffc107 !important;
+    background: transparent !important;
+    color: #ffc107 !important; }
+.btn.btn-primary.btn-outline-primary:hover {
+    border: 2px solid transparent !important;
+    background: #ffc107 !important;
+            }
+.ftco-navbar-light .navbar-nav > .nav-item .nav-link.active {
+    background: transparent;
+    background: none;
+    color: #ffc107; 
+    color: #fff !important; }
+.btn.btn-secondary {
+    background: #a0f669 !important;
+    border: 1px solid #a0f669 !important;
+    color: #fff !important; }
+.btn.btn-secondary:hover {
+    border: 1px solid #a0f669 !important;
+    background: transparent !important;
+    color: #a0f669 !important; }
+.btn.btn-secondary.btn-outline-primary {
+    border: 1px solid #a0f669;
+    background: transparent;
+    color: #a0f669; }
+.btn.btn-secondary.btn-outline-primary:hover {
+    border: 1px solid transparent;
+    background: #a0f669;
+    color: #fff; }
+
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link span:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: #ffc107;
+    visibility: visible;
+    -webkit-transform: scaleX(0);
+    -moz-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    -o-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -ms-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s; }
+
+ p {
+    margin-top: 0;
+    margin-bottom: 1rem; 
+    color: white;
+        }
+
+.ftco-about ul.about-info li span {
+    width: calc(100% - 130px);
+    color: white;
+
+}
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background: #000000;
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: 400;
+    color: rgb(52, 88, 88);
+}
+
+.resume-wrap .date {
+    font-weight: 900;
+    font-size: 26px;
+    color: #ffc107;
+}
+
+.ftco-about .counter-wrap .text p span.number {
+    font-weight: 600;
+    color: #ffc107;
+}
+
+.ftco-counter .block-18 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px 20px;
+}
+
+.ftco-navbar-light.scrolled {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    margin-top: -130px;
+    background: #000000 !important;
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    padding: 0 15px; }
+
+.down {
+    font-size: 16px;
+    background: rgb(52, 88, 88)!important;
+    padding: 7em 0;
+    z-index: 0;
+    }
+
+.section-bg {
+    background-color: rgb(52, 88, 88)!important;
+    
+}
+    
+.heading-section h1.big.big-2 {
+    right: 0;
+}
+
+.testimonials .testimonial-item p {
+    font-style: italic;
+    margin: 0 15px 0 15px;
+    padding: 20px 20px 60px 20px;
+    background: rgba(255, 255, 255, 0.1)!important;
+    position: relative;
+    border-radius: 6px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .section-title p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+  body {
+    font-family: "Poppins", Arial, sans-serif;
+    background:  rgb(52, 88, 88)!important;
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: 400;
+    color:  rgb(52, 88, 88)!important; }
+
+ a {
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
+    color: #ffc107; }
+a:hover, a:focus {
+    text-decoration: none;
+    color: #ffc107;
+    outline: none !important; }
+    
+    .progress-bar {
+        background: #ffc107;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        font-size: 12px;
+        line-height: 1.2;
+        color: #000000;
+        font-weight: 600;
+        position: relative;
+        overflow: visible;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -ms-border-radius: 2px;
+        border-radius: 2px;
+    }
+   
+    .blog-entry .meta a {
+        color: #ffc107;
+    }
+        
+    .ftco-counter .text strong.number {
+        font-weight: 700;
+        font-size: 30px;
+        color: #ffc107;
+        display: block;
+
+    }
+
+    .blog-entry .meta span {
+        color: #ffc107;                        
+                                                     
+                                                    
+    }
+    
+    .heading-section h2 {
+        font-size: 50px;
+        font-weight: 700;
+        text-align: center;
+        line-height: 1.5;
+        color: white;
+    }
+
+    .ftco-section {
+        padding: 7em 0;
+        position: relative;
+    }
+
+    .heading-section h1.big {
+        position: absolute;
+        top: 0px;
+        left: 0;
+        font-size: 7vw;
+        color: rgba(255, 255, 255, 0.1);
+        z-index: -1;
+        font-weight: 900;
+        text-align: center;
+        
+    }
+
+.heading-section h1.big.big-2 {
+    right: 0;
+    
+}
+
+.heading-section {
+    position: relative;
+    
+}
+
+#testimonials{
+    position: relative;
+    padding: 7em 0;
+    padding: 7em 0;
+    padding-top: 7em;
+    padding-right: 0px;
+    padding-bottom: 7em;
+    padding-left: 0px;
+}
+    
+a {
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
+    color: #ffc107;
+}
+
+    .services-1 {
+    margin-bottom: 40px;
+    padding: 2em;
+    background: rgba(255, 255, 255, 0.1);
+    width: 100%;
+    -webkit-box-shadow: 0px 20px 69px -27px rgba(0, 0, 0, 0.17);
+    -moz-box-shadow: 0px 20px 69px -27px rgba(0, 0, 0, 0.17);
+    box-shadow: 0px 20px 69px -27px rgba(0, 0, 0, 0.17); }
+    .services-1 .icon {
+    display: block;
+    margin-bottom: 30px; }
+    .services-1 .icon i {
+    font-size: 60px;
+    line-height: 1.0;
+    color: #ffc107; }
+    .services-1 .desc h3 {
+    line-height: 1.3;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    position: relative;
+    color: #fff; }
+    .services-1 .desc h3:after {
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    right: 0;
+    content: '';
+    width: 30px;
+    height: 1px;
+    background: #ffc107;
+    margin: 0 auto; }
+    .services-1 .desc h3 a {
+    color: #fff; }
+    .services-1 .desc h4 {
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 18px; }
+    .services-1 .desc span {
+    display: block;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: #ffc107; }
+    .services-1:hover {
+    background: #ffc107; }
+    .services-1:hover .icon i {
+    color: #fff; }
+    .services-1:hover h3 {
+    color: #000000; }
+    .services-1:hover h3:after {
+        background: #000000; }
+
+    .contact-section .box {
+    width: 100%;
+    display: block;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px; }
+    @media (max-width: 991.98px) {
+    .contact-section .box {
+    margin-bottom: 30px; } }
+    .contact-section .box .icon {
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 0 auto;
+    margin-bottom: 2em;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%; }
+    .contact-section .box .icon span {
+    color: #ffc107;
+    font-size: 30px; }
+    .contact-section .box h3 {
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase; }
+
+    .contact-section .contact-form {
+    width: 100%; }
+
+    .contact-section .img {
+    width: 100%;
+    background-position: top center; }
+    @media (max-width: 991.98px) {
+    .contact-section .img {
+    height: 500px; } }
+
+    .contact-section .contact-info p a {
+    color: #fff; }
+
+    .contact-section .contact-form {
+    width: 100%; }
+    @media (max-width: 767.98px) {
+    .contact-section .contact-form .btn-primary {
+    display: block;
+    width: 100%; }
+
+ .myimg{
+        height: 200%;
+         
+ }
+
+ .backgr{
+     background-color: rgb(52, 88, 88);
+    
+ }
+
+ .testimonials .testimonial-item .quote-icon-left, .testimonials .testimonial-item .quote-icon-right {
+    color: #ffc107;
+    font-size: 26px;
+  }
+  .testimonials .testimonial-item .quote-icon-left {
+    display: inline-block;
+    left: -5px;
+    position: relative;
+    color: #ffc107
+  }
+  .testimonials .testimonial-item .quote-icon-right {
+    display: inline-block;
+    right: -5px;
+    position: relative;
+    top: 10px;
+    color: #ffc107
+  }
+  
+.testimonials .testimonial-item .quote-icon-left {
+  display: inline-block;
+  left: -5px;
+  position: relative;
+  color: #ffc107
+}
+.testimonials .testimonial-item .quote-icon-right {
+  display: inline-block;
+  right: -5px;
+  position: relative;
+  top: 10px;
+  color: #ffc107
+}
+      
+.icon{
+    content: "\eb76";
+    color: #ffc107;
+}
+
+.ftco-navbar-light .navbar-brand {
+    color: #fff;
+    padding-top: .7rem;
+    font-size: 100px;
+    padding-bottom: .7rem; }
+ }
+
+ /* media query */
+
+@media only screen and (min-width: 320px) and (max-width:1128px) {
+   .ftco-about .img-about .img {
+       height: 460px !important;
+   }
+  }
+
+  #header {
+    background: #000000 !important;
+    border-bottom: #000000 !important;
+    transition: all 0.5s;
+    z-index: 997;
+    padding: 15px 0;
+    top: 40px;
+}
+
+#header .logo a {
+    color: #fff;
+    font-weight: bold;
+}
+
+.navbar-mobile a, .navbar-mobile a:focus {
+    padding: 10px 20px;
+    font-size: 15px;
+    color: #000000 !important;
+}
+
+.navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
+    color: #ffc107!important;
+}
+
+.navbar-mobile {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: #000000 !important;
+    transition: 0.3s;
+    z-index: 999;
+}
+
