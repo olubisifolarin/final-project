@@ -10,6 +10,7 @@ Home
 
 {% block content %}
 
+
 <div class="main-panel">
   <div class="content-wrapper">
     <div class="page-header">
@@ -30,6 +31,10 @@ Home
               {% if messages %}
               {% for m in messages %}
                 <div class="alert alert-success">{{m}}</div>
+
+              {% endfor %}
+              {% endif %}
+              
              {{edit_pro.as_p}}
               <button type="submit" class="btn btn-primary mr-2">Submit</button>
              {% csrf_token %}
@@ -37,9 +42,8 @@ Home
           </div>
         </div>
       </div>   
-                      
-                          
-                          
-         
- {% endblock %}
+    </div>
+  </div>                  
+                                          
+{% endblock %}
           

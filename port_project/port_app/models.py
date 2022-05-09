@@ -31,8 +31,9 @@ class Blog(models.Model):
     title = models.CharField(max_length=250)
     slug = models.SlugField(unique=True)
     image = models.ImageField(blank=True, null=True, upload_to='upload/pics')
-    created = models.DateTimeField(null=True)
-    content = HTMLField('Content')   
+    created = models.DateTimeField(auto_now_add=True)
+    content = models.TextField()
+    # content = HTMLField('Content')   
     user = models.ForeignKey(User, null=True, on_delete=models.CASCADE)
     
     def save(self, *args, **kwargs):

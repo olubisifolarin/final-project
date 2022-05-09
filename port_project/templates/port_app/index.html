@@ -67,7 +67,7 @@ Home
 		            <p>We specialize in designing powerful branding websites that are top notch.</p>
 		            <ul class="about-info mt-4 px-md-0 px-2">
 		            	<li class="d-flex"><span>Name:</span> <span>Olubisi Folarin</span></li>
-		            	<li class="d-flex"><span>Date of birth:</span> <span>May 23, 1991</span></li>
+		            	<li class="d-flex"><span>Date of birth:</span> <span>May 23rd, 1991</span></li>
 		            	<li class="d-flex"><span>Address:</span> <span>Block 8 Plot 7 Dove Estate Ile-epo,Lagos State</span></li>
 		            	<li class="d-flex"><span>Zip code:</span> <span>100001</span></li>
 		            	<li class="d-flex"><span>Email:</span> <span>hollubissy4real10@gmail.com</span></li>
@@ -78,7 +78,7 @@ Home
 	          <div class="counter-wrap ftco-animate d-flex mt-md-3">
               <div class="text">
               	<p class="mb-4">
-	                <span class="number" data-number="20">0</span>
+	                <span class="number" data-number="10">0</span>
 	                <span>Project complete</span>
                 </p>
                 <p><a href="{% static 'port_app/images/myCV.docx' %}" download="My CV" class="btn btn-primary py-3 px-3">Download CV</a></p>
@@ -105,7 +105,7 @@ Home
     				<div class="resume-wrap ftco-animate">
     					<span class="date">{{p.year}}</span>
     					<h2>{{p.title}}</h2>
-    					<span class="position">{{p.subtitle}}</span>
+    					<span class="position" style="color: black;">{{p.subtitle}}</span>
     					<p class="mt-4">{{p.content}}</p>
     				</div>
 				</div>
@@ -440,7 +440,7 @@ Home
           			<span class="icon-globe"></span>
           		</div>
           		<h3 class="mb-4">Website</h3>
-	            <p><a href="#">yoursite.com</a></p>
+	            <p><a href="https://www.olubisifolarin.pythonanywhere.com">olubisifolarin.pythonanywhere.com</a></p>
 	          </div>
           </div>
         </div>
@@ -450,12 +450,13 @@ Home
 			  
             <form action="#" method= 'POST' class="bg-dark p-4 p-md-5 contact-form">
 				
-			 {{contact.as_p }}
+			 {{ contact.as_p }}
+			 {% csrf_token %}
               
               <div class="form-group">
                 <input type="submit" value="Send Message" style="width:50%;" class="btn btn-primary py-3 px-5">
               </div>
-			  {% csrf_token %}
+		
             </form>
           
           </div>

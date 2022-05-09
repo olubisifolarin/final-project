@@ -17,7 +17,7 @@ Home
         <h3 class="page-title"> View BlogPost </h3>
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Forms</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'backend:view_blog' %}">Forms</a></li>
             <li class="breadcrumb-item active" aria-current="page">Blog Post</li>
           </ol>
         </nav>
@@ -28,7 +28,7 @@ Home
         <div class="col-md-6 d-flex ftco-animate">
 
             <div class="blog-entry justify-content-end">
-                <img class="block-20" src="{{post.image.url}}" alt="">
+                <img class="block-20 img-fluid" src="{{post.image.url}}" alt="">
                 <div >
                     <div >
                         <p class="mb-0">

@@ -14,8 +14,6 @@ class EditProfileForm(forms.ModelForm):
         attrs={'class': 'form-control', 'placeholder': 'Enter Firstname', 'style': 'color:white;'}))
     last_name = forms.CharField(required=False, widget=forms.TextInput(
         attrs={'class': 'form-control', 'placeholder': 'Enter Lastname', 'style': 'color:white;'}))
-    image = forms.ImageField(required=False, widget=forms.FileInput(
-        attrs={'class': 'form-control', 'placeholder': 'Upload you pics', 'style': 'color:white;'}))
     email = forms.EmailField(label='Email :',
                              widget=forms.EmailInput(attrs={'class': 'form-control', 'placeholder': 'Enter Email', 'style': 'color:white;'}))
     
@@ -27,8 +25,8 @@ class EditProfileForm(forms.ModelForm):
 
     class Meta():
         model = User
-        fields = ['username', 'first_name', 'last_name',
-                  'email']
+        fields = ['username', 'first_name', 'last_name', 'email']
+        
         
         
 class AddBlogForm(forms.ModelForm):
@@ -40,20 +38,22 @@ class AddBlogForm(forms.ModelForm):
     content = forms.CharField(label='Content :',
                              widget=forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Content', 'style': 'color:white;'}))
     
-    
     class Meta():
         model = Blog
         fields = ['title', 'image', 'content', 'user']
-        exclude = ['created', 'slug']
+        exclude = ['slug', 'created']
         
     # How to edit our blogpost(Form)
 class EditBlogForm(forms.ModelForm):
-
+    title = forms.CharField(required=False, widget=forms.TextInput(
+        attrs={'class': 'form-control', 'placeholder': 'Title', 'style': 'color:white;'}))
+    image = forms.ImageField(required=False, widget=forms.FileInput(
+        attrs={'class': 'form-control', 'placeholder': 'Upload your pics', 'style': 'color:white;'}))
     content = forms.CharField(required=False, widget=forms.TextInput(
         attrs={'class': 'form-control', 'placeholder': 'Edit post', 'style': 'color:white;'}))
     class Meta():
         model = Blog
-        exclude = ['slug', 'blog_title', 'created', 'user']
+        exclude = ['slug', 'user', 'created']
         
 class ViewBlogPostForm(forms.ModelForm):
     

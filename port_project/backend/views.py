@@ -14,8 +14,9 @@ from django.contrib.auth import authenticate, login, logout
 
 
 
-# Create your views here.
-        
+
+
+# Create your views here.          
 def signin(request):
     if request.method == 'POST':
         username = request.POST['user_name']
@@ -30,9 +31,8 @@ def signin(request):
         messages.error(request, 'Wrong Information')
     return render(request, 'backend/signin.html')
  
-
-
-
+ 
+ 
 @login_required(login_url='/signin/')
 def dashboard(request):
     return render(request, 'backend/dashboard.html')
@@ -49,6 +49,7 @@ def edit_profile(request):
         if edit_profile.is_valid():
             edit_profile.save()
             messages.success(request, 'Profile Edited Successfully')
+            return redirect('backend:edit_profile')
     else:
             edit_profile=EditProfileForm()
     return render(request, 'backend/edit-profile.html', {'edit_pro':edit_profile})
@@ -71,17 +72,37 @@ def add_blog(request):
     return render(request, 'backend/add-blog.html', {'blog':blog})
 
 # for dashboard blog edit, view and delete
+
 @login_required(login_url='/signin/')
 def edit_post(request, slug):
-    editpost = get_object_or_404(Blog, slug=slug)
+    single_blog = get_object_or_404(Blog, slug=slug)
     if request.method == 'POST':
-        editpost = EditBlogForm(request.POST, request.FILES, instance=editpost)
-        if editpost.is_valid():
-            editpost.save()
-            
-    else:
-        editpost = EditBlogForm(instance=editpost)
-    return render(request, 'backend/edit-blogpost.html', {'edit':editpost})
+        editform =EditBlogForm(request.POST, request.FILES, instance=single_blog)
+        if editform.is_valid():
+            blogf = editform.save(commit=False)
+            blogf.user = request.user
+            blogf.save()
+            # messages.success(request, 'Blog Edit Successfully')
+            return redirect('backend:view_blog')
+        
+    else: 
+        editform = EditBlogForm(instance=single_blog)
+    return render(request, 'backend/edit-blogpost.html', {'edit':editform})
+
+
+
+# def edit_post(request, slug):
+#     editpost = get_object_or_404(Blog, slug=slug)
+#     if request.method == 'POST':
+#         form = EditBlogForm(request.POST, request.FILES, instance=editpost)   
+#         if form.is_valid():
+#             editpost = form.save(commit=False)
+#             editpost.save()          
+#             messages.success(request, 'Blog Edited Successfully')
+#             return redirect('backend:view_blog')             
+#     else:
+#         form = EditBlogForm(instance=editpost)
+#         return render(request, 'backend/edit-blogpost.html', {'form':form})
 
 @login_required(login_url='/signin/')
 def view_post(request, slug):

@@ -25,12 +25,12 @@
         <div class="row">
           {% if detail_blog %}
           <div class="col-lg-8 ftco-animate">
-            <h2 class="mb-3">{{detail_blog.created_on}}</h2>
+            <h2 class="mb-3">{{detail_blog.created}}</h2>
             <p>{{detail_blog.title}}</p>
             <p>
               <img src="{{detail_blog.image_url}}" alt="" class="img-fluid">
             </p>  
-            </p>{{detail_blog.content}}</p>
+            <p>{{detail_blog.content}}</p>
             
           {% endif %}
             <div class="tag-widget post-tag-container mb-5 mt-5">
@@ -72,6 +72,8 @@
                 </li>
                 {% endfor %}
                 {% endif %}
+
+              
               </ul>
               <ul>
                    
