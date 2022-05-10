@@ -13,45 +13,44 @@
 
 	<section class="ftco-section" id="blog-section">
 		<div class="container">
-      
 			<div class="row justify-content-center mb-5 pb-5">
-        <p class="breadcrumbs text-center"><span class="mr-2"><a href="{% url 'index' %}">Home<i class="ion-ios-arrow-forward"></i></a></span><span class="mr-2"><a href="#">Blog <i class="ion-ios-arrow-forward"></i></a></span></p>
-        <div class="col-md-7 heading-section text-center ftco-animate">
-          
+				<div class="col-md-7 heading-section text-center ftco-animate">
 					<h1 class="big big-2">Blog</h1>
-					<h2 class="mb-4">Our Blog</h2>
+					<h2 class="mb-4">My Blog</h2>
 					<p>Welcome to my blog, where u can get insight of what is happening around you.</p>
 				</div>
 			</div>
 			<div class="row d-flex">
-        {% if blogs %}
-        {% for d in blogs %}
-				<div class="col-md-6 d-flex ftco-animate">
-         
+				{% if blogs %}
+				{% for d in blogs %}
+				<div class="col-md-4 ftco-animate">
 					<div class="blog-entry justify-content-end">
-					<img class="block-20" src="{{d.image_url}}" alt="">
-					</a>
-					<div class="text mt-3 float-right d-block">
-						<div class="d-flex align-items-center mb-3 meta">
-						  <p class="mb-0">
-							  <span class="mr-2">{{d.created}}</span>
-							  <a href="#" class="mr-2">{{d.poster}}</a>
-							  <a href="#" class="meta-chat"><span class="icon-chat"></span></a>
-						  </p>
-					  </div>
-					  <h3 class="heading">{{ d.title }}</h3>
-					  <p>{{ d.content|slice:":50" }}</p>
-					  <a href="{% url 'port_app:detail_blog' d.slug %}" class="btn btn-warning">READ MORE &rrarr;</a>
+						<img class="fff block-20" src="{{ d.image_url }}" alt="">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<div class="d-flex align-items-center mb-3 meta">
+								<p class="mb-0">
+									<span class="mr-2"></span>
+									<a href="#" class="mr-2">{{d.poster}}</a>
+									<a href="#" class="meta-chat"><span class="icon-chat">{{d.created}}</span></a>
+								</p>
+							</div>
+							<div>
+							<h3 class="heading">{{ d.title }}</h3>
+							<p>{{ d.content|slice:":50" }}</p>
+							<a href="{% url 'port_app:detail_blog' d.slug %}" class="btn btn-warning">READ MORE &rrarr;</a>
+							</div>
+						</div>
+					
 					</div>
-				  </div>
-         
-				</div>
-        {% endfor %}
-        {% endif %}
-			  
-			  
+				
+			  	</div>
+				{% endfor %}
+				{% endif %}
+    		</div>
 		</div>
     </section>
+
 
 {% endblock %}  
 

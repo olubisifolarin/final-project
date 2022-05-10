@@ -14,7 +14,7 @@
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
           <div class="col-md-12 ftco-animate pb-5 mb-3 text-center">
             <h1 class="mb-3 bread">Blog Single Post</h1>
-            <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'index' %}">Home <i class="ion-ios-arrow-forward"></i></a></span> <span class="mr-2"><a href="#">Blog <i class="ion-ios-arrow-forward"></i></a></span> <span>Blog Single <i class="ion-ios-arrow-forward"></i></span></p>
+              <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'index' %}">Home <i class="ion-ios-arrow-forward"></i></a></span> <span class="mr-2"><a href="{% url 'port_app:blog' %}">Blog <i class="ion-ios-arrow-forward"></i></a></span> <span>Blog Single <i class="ion-ios-arrow-forward"></i></span></p>
           </div>
         </div>
       </div>
@@ -89,7 +89,7 @@
                       {% csrf_token %}
               
                       <div class="form-group">
-                        <input type="submit" value="Post Comment" class="btn py-3 px-4 btn-primary" style="width:30%;">
+                        <input type="submit" value="Post" class="btn py-3 px-4 btn-primary" style="width:30%;">
                         <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                           Reply
                         </button> -->

@@ -28,7 +28,7 @@ def signin(request):
             login(request, user)
             return redirect('backend:dashboard')
     else:
-        messages.error(request, 'Wrong Information')
+        messages.error(request, '')
     return render(request, 'backend/signin.html')
  
  

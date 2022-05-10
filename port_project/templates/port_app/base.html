@@ -62,53 +62,30 @@
 
 <body>
 
-  <header id="header" class="fixed-top d-flex align-items-cente" style="border-bottom: #000000; background-color: #000000;">
+  <header id="header" class="fixed-top d-flex align-items-cente header-scrolled" style="border-bottom: #000000; background-color: #000000;">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
 
       <h1 class="logo me-auto me-lg-0" style="font-weight: bold;"><a href="{% url 'index' %} ">Folarin</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
-          <li class="nav-item"><a href="#services-section" class="nav-link"><span>Services</span></a></li>
-          <li class="nav-item"><a href="#skills-section" class="nav-link"><span>Skills</span></a></li>
-          <li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projects</span></a></li>
-          <li class="nav-item"><a href="#blog-section" class="nav-link"><span>My Blog</span></a></li>
-          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
-          <li class="nav-item"><a href="{% url 'port_app:register' %}" class="nav-link"><span>Register</span></a></li>
+          <li><a class="nav-link scrollto active" href="#home-section">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about-section">About</a></li>
+          <li><a class="nav-link scrollto" href="#resume-section">Resume</a></li>
+          <li><a class="nav-link scrollto" href="#services-section">Services</a></li>
+          <li><a class="nav-link scrollto" href="#skills-section">Skills</a></li>
+          <li><a class="nav-link scrollto" href="#projects-section">Projects</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'port_app:blog' %}">Blog</a></li>
+          <li><a class="nav-link scrollto" href="#contact-section">Contact</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'port_app:register' %}">Register</a></li>
         </ul>   
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
     </div>
   </header><!-- End Header -->
 <!-- <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-	
 
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" style="font-size: 150%;" href="{% url 'index' %}">Folarin</a>
-	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
-
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav nav ml-auto">
-	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
-	          <li class="nav-item"><a href="#services-section" class="nav-link"><span>Services</span></a></li>
-	          <li class="nav-item"><a href="#skills-section" class="nav-link"><span>Skills</span></a></li>
-	          <li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projects</span></a></li>
-	          <li class="nav-item"><a href="#blog-section" class="nav-link"><span>My Blog</span></a></li>
-	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
-	          <li class="nav-item"><a href="{% url 'port_app:register' %}" class="nav-link"><span>Register</span></a></li>
-	        </ul>
-	      </div>
-	    </div>
     </nav> --> -->
     {% block content %}
     {% endblock %}
