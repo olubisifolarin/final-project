@@ -14,10 +14,10 @@ Home
         <div class="col-lg-6 col-md-6 mt-5 pt-5 col-centered" >
 			<h1 class="mb-4 mt-3">I'm <span class="text-warning">Olubisi Folarin</span></h1>
 			<h2 class="mb-4">A Freelance Web Developer</h2>
-			<p><a href="tel://234 8021317321" class="btn btn-primary py-3 px-4">Hire me</a> <a href="#" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
+			<p><a href="tel://234 8021317321" class="btn btn-primary py-3 px-4">Hire me</a> <a href="#projects-section" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
         </div>
 
-		<div class="col-lg-6 col-md-6" style="background-image:url({% static 'port_app/images/mypi.png' %}); background-repeat: no-repeat; height: 800px;"></div>
+		<div class="logo col-lg-6 col-md-6" style="background-image:url({% static 'port_app/images/logo1.png' %}); background-repeat: no-repeat; height: 800px;"></div>
       </div>
     </div>
   </section><!-- End Hero -->
@@ -37,7 +37,7 @@ Home
     			</div>
     			<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
     				<div class="row justify-content-start pb-3">
-		          <div class="col-md-12 heading-section ftco-animate">
+		          <div class="col-md-12 heading-section ftco-animate" style="margin-top: 20%; margin-left:10%;">
 		          	<h1 class="big">About</h1>
 		            <h2 class="mb-4">About Me</h2>
 		            <p>We specialize in designing powerful branding websites that are top notch.</p>
@@ -45,19 +45,19 @@ Home
 		            	<li class="d-flex"><span>Name:</span> <span>Olubisi Folarin</span></li>
 		            	<li class="d-flex"><span>Date of birth:</span> <span>May 23rd, 1991</span></li>
 		            	<li class="d-flex"><span>Address:</span> <span>Block 8 Plot 7 Dove Estate Ile-epo,Lagos State</span></li>
-		            	<li class="d-flex"><span>Zip code:</span> <span>100001</span></li>
+		            	<li class="d-flex"><span>Zip code:</span> <span>102213</span></li>
 		            	<li class="d-flex"><span>Email:</span> <span>hollubissy4real10@gmail.com</span></li>
 		            	<li class="d-flex"><span>Phone: </span> <span>+234 8021317321</span></li>
 		            </ul>
 		          </div>
 		        </div>
-	          <div class="counter-wrap ftco-animate d-flex mt-md-3">
+	          <div class="counter-wrap ftco-animate d-flex mt-md-3" style="margin-left:20%">
               <div class="text">
               	<p class="mb-4">
 	                <span class="number" data-number="10">0</span>
 	                <span>Project complete</span>
                 </p>
-                <p><a href="{% static 'port_app/images/myCV.docx' %}" download="My CV" class="btn btn-primary py-3 px-3">Download CV</a></p>
+                <p><a href="{% static 'port_app/images/Olubisi_Folarin_CV.PDF' %}" download="My CV" class="btn btn-primary py-3 px-3">Download CV</a></p>
               </div>
 	          </div>
 	        </div>
@@ -94,7 +94,7 @@ Home
     			
     		<div class="row justify-content-center mt-5">
     			<div class="col-md-6 text-center ftco-animate">
-    				<p><a href="{% static 'port_app/images/myCV.docx' %}" class="btn btn-primary py-4 px-5">Download CV</a></p>
+    				<p><a href="{% static 'port_app/images/Olubisi_Folarin_CV.PDF' %}" class="btn btn-primary py-4 px-5">Download CV</a></p>
     			</div>
     		</div>
     	</div>
@@ -322,7 +322,7 @@ Home
 			<div class="row justify-content-center">
 				<div class="col-md-7 ftco-animate text-center">
 					<h2>I'm <span class="text-warning">Available</span> for freelancing</h2>
-					<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+					<p></p>
 					<p class="mb-0"><a href="tel://234 8021317321" class="btn btn-warning py-3 px-5">Hire me</a></p>
 				</div>
 			</div>
@@ -419,25 +419,28 @@ Home
 	          </div>
           </div>
         </div>
+	</div>
 
+	<div class="map container-fluid offset-1">
         <div class="row no-gutters block-9">
-          <div class="col-md-6 order-md-last d-flex">
+          <div class="col-md-6 order-md-last d-flex m-4">
 			  
-            <form action="#" method= 'POST' class="bg-dark p-4 p-md-5 contact-form">
+            <form action="#" method= 'POST' class="bg-dark p-4 p-md-5 contact-form"  style="height:500px; width:550px;">
 				
 			 {{ contact.as_p }}
 			 {% csrf_token %}
               
               <div class="form-group">
-                <input type="submit" value="Send Message" style="width:50%;" class="btn btn-primary py-3 px-5">
+                <input type="submit" value="Send" style="width:50%;" class="btn btn-primary py-3 px-5">
               </div>
 		
             </form>
           
           </div>
 
-          <div class="col-md-6 d-flex">
-          	<div class="img" style="background-image: url({% static 'port_app/images/mypi.png' %});"></div>
+          <div class="col-md-5 d-flex m-4">
+			<div class="mapouter"><div class="gmap_canvas"><iframe width="550" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Dove%20Estate,%20Oke%20odo&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-to.org"></a><br><style>.mapouter{position:relative;text-align:right;height:500px;width:550px;margin-left:10px;}</style><a href="https://www.embedgooglemap.net">integrate google maps into website</a><style>.gmap_canvas {overflow:hidden;background:none!important;}</style></div></div>
+			<!-- <div class="img" style="background-image: url({% static 'port_app/images/mypi.png' %});"></div> -->
           </div>
         </div>
       </div>

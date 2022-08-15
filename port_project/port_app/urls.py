@@ -12,7 +12,7 @@ urlpatterns = [
     path('blog/', views.blog, name='blog'),
     path('register/', views.register, name='register'),
     path('blog-details/<slug:slug>/', views.blog_detail, name='detail_blog'),
-
+    
     # path('blog-details/<slug:slug>/', views.blog_detail.as_view(model=Blog), name='detail_blog'),
    
 ]

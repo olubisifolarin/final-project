@@ -125,6 +125,7 @@ body {
     text-align: center;
     background: rgba(255, 255, 255, 0.1);
     padding: 30px 20px;
+    margin-top: 20px;
 }
 
 .ftco-navbar-light.scrolled {
@@ -232,7 +233,7 @@ a:hover, a:focus {
     }
 
     .ftco-section {
-        padding: 7em 0;
+        padding: 4px 0;
         position: relative;
     }
 
@@ -260,11 +261,11 @@ a:hover, a:focus {
 
 #testimonials{
     position: relative;
-    padding: 7em 0;
-    padding: 7em 0;
-    padding-top: 7em;
+    padding: 3px 0;
+    padding: 3px 0;
+    padding-top: 3px;
     padding-right: 0px;
-    padding-bottom: 7em;
+    padding-bottom: 3px;
     padding-left: 0px;
 }
     
@@ -475,9 +476,9 @@ a {
     z-index: 999;
 }
 
-@media only screen and (min-width: 320px) and (max-width:1128px) {
+@media only screen and (min-width: 250px) and (max-width:1128px) {
     .fff {
-        height: 250px !important;
+        height: 300px !important;
 }
 
 }
@@ -514,7 +515,7 @@ a {
     background-position: center center;
     position: relative;
     display: block;
-   padding-block: 10px;
+    padding-bottom: 10px;
  }
   
   .blog-entry {
@@ -575,4 +576,55 @@ a {
         }
       }
 
+.mt-5,
+.my-5 {
+        margin-top: 1px !important; }
+
+.pb-5,
+.py-5 {
+        padding-bottom: 1px !important; }
+
+.pt-5,
+.py-5 {
+        padding-top: 1px !important; }
+
+    .slider-text .breadcrumbs {
+        font-size: 12px;
+        margin-bottom: 50px;
+        z-index: 99;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 600;
+        height: 20%;
+    }
+
+    @media only screen and (min-width: 320px) and (max-width:1128px) {
+        .map {
+            padding-right: 10px;
+            margin-right: 10px;
+            width: 300px;
     
+        }
+    }
+
+    @media only screen and (min-width: 320px) and (max-width:1128px) {
+        .gmap_canvas {
+            left:0;
+            top:0;
+            height:100%;
+            width:100%;
+            position:absolute;
+                  
+    }
+
+}
+
+@media only screen and (min-width: 320px) and (max-width:1128px) {
+    .logo {
+        width: 350px;
+        height: 50px;
+
+}
+
+}

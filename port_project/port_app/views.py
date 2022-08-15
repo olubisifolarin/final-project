@@ -36,8 +36,9 @@ def index(request):
 
 
 def blog(request):
-    blogs = Blog.objects.order_by('created') 
+    blogs = Blog.objects.order_by('-created')
     return render(request, 'port_app/blog.html', {'blogs':blogs})
+
 
 # class blog_detail(DetailView):
 #     model = Blog

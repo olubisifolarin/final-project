@@ -35,6 +35,7 @@ class Blog(models.Model):
     content = models.TextField()
     # content = HTMLField('Content')   
     user = models.ForeignKey(User, null=True, on_delete=models.CASCADE)
+   
     
     def save(self, *args, **kwargs):
         if not self.id:
@@ -47,6 +48,14 @@ class Blog(models.Model):
     def image_url(self):
         if self.image: 
             return self.image.url
+        
+class Blog_Approval(models.Model):
+    text = models.CharField(max_length=1000)
+    is_approved =models.BooleanField(default=False)
+    
+    def __str__(self):
+        return self.text
+    
         
 class Comment(models.Model):
     name = models.CharField(max_length=30)

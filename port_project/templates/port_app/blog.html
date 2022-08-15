@@ -12,6 +12,7 @@
     {% block content %}
 
 	<section class="ftco-section" id="blog-section">
+		<p class="text-center"><span class="mr-2"><a href="{% url 'index' %}">Home <i class="ion-ios-arrow-forward"></i></a></span><span class="mr-2"><a href="{% url 'port_app:blog' %}">Blog <i class="ion-ios-arrow-forward"></i></a></span></p>
 		<div class="container">
 			<div class="row justify-content-center mb-5 pb-5">
 				<div class="col-md-7 heading-section text-center ftco-animate">
@@ -20,6 +21,7 @@
 					<p>Welcome to my blog, where u can get insight of what is happening around you.</p>
 				</div>
 			</div>
+			
 			<div class="row d-flex">
 				{% if blogs %}
 				{% for d in blogs %}
